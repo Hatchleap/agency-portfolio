@@ -118,7 +118,7 @@ const Wherecreatesection = () => {
               </div>
 
               {/* Card */}
-              <div className="relative w-[300px] h-[300px] sm:w-[800px] sm:h-[600px] md:w-[900px] md:h-[600px] rounded-2xl border-[6px] sm:border-[8px] md:border-[20px] border-[#333333] shadow-xl overflow-hidden bg-white ml-4">
+              <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[600px] md:w-[800px] md:h-[600px] rounded-2xl border-[6px] sm:border-[8px] md:border-[20px] border-[#333333] shadow-xl overflow-hidden bg-white ml-4">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
                 <div className="absolute left-4 bottom-4">
                   <button className="bg-lime-400 text-black px-3 sm:px-4 py-2 rounded font-bold shadow hover:bg-lime-500 transition text-xs sm:text-sm">
