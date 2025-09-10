@@ -1,3 +1,4 @@
+import Contact from "@/component/Contact";
 import About from "@/component/About";
 import Home from "@/component/Home";
 import Hero from "@/component/Hero";
@@ -5,7 +6,9 @@ import WhereCreateSection from "@/component/Wherecreatesection";
 import Image from "next/image";
 import StatsSection from "@/component/StatsSection";
 import ProcessSection from "@/component/ProcessSection";
-
+import Project from "@/component/Project";
+import Blog from "@/component/Blog";
+import Footer from "@/component/Footer";
 
 export default function Page() {
   return (
@@ -15,6 +18,10 @@ export default function Page() {
       <WhereCreateSection />
       <ProcessSection />
       <StatsSection />
+      <Project />
+      <Blog />
+      <Contact />
+      <Footer />
     </div>
   );
 }
