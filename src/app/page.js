@@ -9,6 +9,7 @@ import ProcessSection from "@/component/ProcessSection";
 import Project from "@/component/Project";
 import Blog from "@/component/Blog";
 import Footer from "@/component/Footer";
+import FAQSection from "@/component/FAQSection";
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
       <Project />
       <Blog />
       <Contact />
+      <FAQSection />
       <Footer />
     </div>
   );

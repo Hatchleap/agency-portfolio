@@ -1,50 +1,39 @@
-// components/FooterCTA.jsx
 "use client";
 
 import React from "react";
 
 const Footer = () => {
   return (
-    <section className="w-full bg-black text-white py-16 px-6 md:px-16 relative overflow-hidden">
-      {/* Main content wrapper */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10">
-        
-        {/* Left: Large heading & newsletter */}
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
-            scalefiction
-          </h1>
+    <div className="w-full bg-black bg-cover bg-center text-white rounded-t-[10px]" style={{ backgroundImage: "url('/image/foot.jpg')" }}>
+      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-12">
 
-          {/* Email input */}
-          <div className="flex items-center max-w-md">
-            <input
-              type="email"
-              placeholder="enter your email..."
-              className="flex-1 py-3 px-4 rounded-l-md text-black outline-none"
+        {/* Left Section */}
+        <div className="md:w-1/3">
+          <h2 className="text-4xl font-bold leading-tight mb-6 text-left">
+            RAISE SMART. GROW FAST. LET’S START TODAY!
+          </h2>
+          <div className="flex items-center space-x-3 mb-4">
+            <input 
+              type="email" 
+              placeholder="enter your email.." 
+              className="px-4 py-3 rounded bg-gray-800 placeholder-gray-400 text-white outline-none w-full"
             />
-            <button className="bg-orange-500 text-white px-4 py-3 rounded-r-md hover:bg-orange-600 transition">
-              &rarr;
+            <button className="bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded">
+              ➔
             </button>
           </div>
-
-          {/* Checkbox */}
-          <div className="mt-3 flex items-center text-sm">
-            <input
-              type="checkbox"
-              id="subscribe"
-              className="mr-2 w-4 h-4"
-            />
+          <div className="flex items-center text-sm text-gray-400">
+            <input type="checkbox" id="subscribe" className="mr-2"/>
             <label htmlFor="subscribe">stay tuned and subscribe to our newsletter</label>
           </div>
         </div>
 
-        {/* Right: Footer links */}
-        <div className="flex-1 flex flex-col md:flex-row justify-between gap-10 text-sm">
-          
-          {/* Menu */}
+        {/* Right Section */}
+        <div className="md:w-2/3 flex justify-end space-x-28 w-full">
+          {/* Column 1 – Main Home */}
           <div>
-            <h2 className="font-semibold mb-2">Main home</h2>
-            <ul className="space-y-1">
+            <h3 className="font-semibold mb-4">Main home</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>Home</li>
               <li>About us</li>
               <li>Portfolio</li>
@@ -53,20 +42,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Location & Contact */}
+          {/* Column 2 – Location */}
           <div>
-            <h2 className="font-semibold mb-2">Location</h2>
-            <p>ranchview dr.</p>
-            <p>richardson california 62536</p>
-            <h2 className="font-semibold mt-4 mb-2">Contact us</h2>
-            <p>infoorvio@gmail.com</p>
-            <p>(999) 000 2343</p>
+            <h3 className="font-semibold mb-4">Location</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li>ranchview dr.</li>
+              <li>richardson california</li>
+              <li>62536</li>
+              <li className="font-semibold">Contact us</li>
+              <li>infoowie@gmail.com</li>
+              <li>(999) 000 2343</li>
+            </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Column 3 – Follow Us */}
           <div>
-            <h2 className="font-semibold mb-2">Follow Us</h2>
-            <ul className="space-y-1">
+            <h3 className="font-semibold mb-4">Follow Us</h3>
+            <ul className="space-y-2 text-gray-300 text-sm">
               <li>TikTok</li>
               <li>Twitter</li>
               <li>Instagram</li>
@@ -75,13 +67,9 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Copyright */}
-      <div className="mt-12 border-t border-gray-800 pt-6 text-sm text-gray-500 text-center">
-        Copyright © 2025 Wprealizer
       </div>
-    </section>
+    </div>
   );
 };
 

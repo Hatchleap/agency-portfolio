@@ -51,10 +51,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full px-4 py-12">
+    <section className="w-full px-4 py-12 bg-white text-black">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10 text-center md:text-left">
-          <span className="font-bold">Get</span> in touch
+        <h2 className="text-4xl font-semibold mb-10 text-center md:text-left text-zinc-800">
+          <span className="font-bold text-black">Get</span> in touch
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-10">
           {/* Form Section */}
@@ -69,7 +69,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your name"
-                  className="w-full border border-gray-300 rounded-md p-2"
+                  className="w-full border border-gray-700 rounded-md p-2"
                 />
               </div>
               <div>
@@ -81,7 +81,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   placeholder="Enter your email"
-                  className="w-full border border-gray-300 rounded-md p-2"
+                  className="w-full border border-gray-700 rounded-md p-2"
                 />
               </div>
             </div>
@@ -95,7 +95,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Contact"
-                  className="w-full border border-gray-300 rounded-md p-2"
+                  className="w-full border border-gray-700 rounded-md p-2"
                 />
               </div>
               <div>
@@ -104,7 +104,7 @@ const Contact = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full border border-gray-300 rounded-md p-2"
+                  className="w-full border border-gray-700 rounded-md p-2"
                 >
                   <option>Web Design</option>
                   <option>App Development</option>
@@ -122,11 +122,11 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 placeholder="Enter your message"
-                className="w-full border border-gray-300 rounded-md p-2"
+                className="w-full border border-gray-700 rounded-md p-2"
               />
             </div>
 
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-600">
               ⚠ All the fields are required. By sending the form you agree to the{" "}
               <a href="#" className="text-blue-600 underline">Terms & Conditions</a> and{" "}
               <a href="#" className="text-blue-600 underline">Privacy Policy</a>.
