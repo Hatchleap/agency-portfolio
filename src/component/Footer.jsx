@@ -4,72 +4,72 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-black bg-cover bg-center text-white rounded-t-[10px]" style={{ backgroundImage: "url('/image/foot.jpg')" }}>
-      <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-start gap-12">
+    <section
+      className="bg-cover bg-center rounded-lg overflow-hidden h-full min-h-[400px]"
+      style={{ backgroundImage: "url('/image/foot5.png')" }}
+    >
+      <div className=" p-6 md:p-12 rounded-lg">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Left Content */}
+          <div className="flex flex-col justify-center space-y-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-white max-w-md">
+              RAISE SMART. GROW FAST. LET'S START TODAY!
+            </h2>
+            
+            {/* Input and Button */}
+            <div className="flex flex-row sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="enter your email..."
+                className="p-3 rounded-full border-2 border-gray-600 text-white w-72 sm:w-96"
+              />
+              <button className="bg-orange-500 hover:bg-orange-600 w-12 h-12 flex items-center justify-center rounded-full transition text-2xl">
+                ➔
+              </button>
+            </div>
 
-        {/* Left Section */}
-        <div className="md:w-1/3">
-          <h2 className="text-4xl font-bold leading-tight mb-6 text-left">
-            RAISE SMART. GROW FAST. LET’S START TODAY!
-          </h2>
-          <div className="flex items-center space-x-3 mb-4">
-            <input 
-              type="email" 
-              placeholder="enter your email.." 
-              className="px-4 py-3 rounded bg-gray-800 placeholder-gray-400 text-white outline-none w-full"
-            />
-            <button className="bg-orange-500 hover:bg-orange-600 px-5 py-3 rounded">
-              ➔
-            </button>
+            {/* Checkbox */}
+            {/* <div className="flex items-center space-x-2 text-white text-sm">
+              <input type="checkbox" id="subscribe" className="accent-orange-500" />
+              <label htmlFor="subscribe">stay tuned and subscribe to our newsletter</label>
+            </div> */}
           </div>
-          <div className="flex items-center text-sm text-gray-400">
-            <input type="checkbox" id="subscribe" className="mr-2"/>
-            <label htmlFor="subscribe">stay tuned and subscribe to our newsletter</label>
+
+          {/* Right Content */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-white text-sm mt-4 md:mt-0">
+            <div>
+              <h3 className="font-bold mb-2 text-lg md:text-lg">Main home</h3>
+              <ul className="space-y-1 text-sm md:text-sm">
+                <li>Home</li>
+                <li>About us</li>
+                <li>Portfolio</li>
+                <li>Blogs</li>
+                <li>Contact Us</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2 text-lg md:text-lg">Location</h3>
+              <p className="text-sm md:text-sm">ranchview dr.</p>
+              <p className="text-sm md:text-sm">richardson california</p>
+              <p className="text-sm md:text-sm">62536</p>
+              <h3 className="font-bold mt-4 mb-2 text-lg md:text-lg">Contat us</h3>
+              <p className="text-sm md:text-sm">infoorvio@gmail.com</p>
+              <p className="text-sm md:text-sm">(999) 000 2343</p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-2 text-lg md:text-lg">Follow Us</h3>
+              <ul className="space-y-1 text-sm md:text-sm">
+                <li>TikTok</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>Linkedin</li>
+                <li>Facebook</li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        {/* Right Section */}
-        <div className="md:w-2/3 flex justify-end space-x-28 w-full">
-          {/* Column 1 – Main Home */}
-          <div>
-            <h3 className="font-semibold mb-4">Main home</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Home</li>
-              <li>About us</li>
-              <li>Portfolio</li>
-              <li>Blogs</li>
-              <li>Contact Us</li>
-            </ul>
-          </div>
-
-          {/* Column 2 – Location */}
-          <div>
-            <h3 className="font-semibold mb-4">Location</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>ranchview dr.</li>
-              <li>richardson california</li>
-              <li>62536</li>
-              <li className="font-semibold">Contact us</li>
-              <li>infoowie@gmail.com</li>
-              <li>(999) 000 2343</li>
-            </ul>
-          </div>
-
-          {/* Column 3 – Follow Us */}
-          <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
-              <li>TikTok</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>Linkedin</li>
-              <li>Facebook</li>
-            </ul>
-          </div>
-        </div>
-
       </div>
-    </div>
+    </section>
   );
 };
 

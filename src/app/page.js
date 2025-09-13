@@ -10,6 +10,8 @@ import Project from "@/component/Project";
 import Blog from "@/component/Blog";
 import Footer from "@/component/Footer";
 import FAQSection from "@/component/FAQSection";
+import Testimonial from "@/component/Testimonial";
+import Call from "@/component/call";
 
 export default function Page() {
   return (
@@ -21,8 +23,9 @@ export default function Page() {
       <StatsSection />
       <Project />
       <Blog />
-      <Contact />
       <FAQSection />
+      <Contact />
+      <Call />
       <Footer />
     </div>
   );

@@ -60,7 +60,7 @@ const Wherecreatesection = () => {
   ];
 
   return (
-    <section className="w-full bg-black text-white flex flex-col gap-8 px-6 md:px-16 py-12 md:py-16">
+    <section className="w-full bg-black text-white flex flex-col gap-8 px-6 md:px-16 py-12 md:py-14">
       {/* Top Content */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="flex-1 flex flex-col items-start justify-center text-center md:text-left">
