@@ -12,20 +12,23 @@ import Footer from "@/component/Footer";
 import FAQSection from "@/component/FAQSection";
 import Testimonial from "@/component/Testimonial";
 import Call from "@/component/call";
+import Marquee from "@/component/Marquee";
 
 export default function Page() {
   return (
     <div>
-      <Hero />
+      <Home />
       <About />
       <WhereCreateSection />
       <ProcessSection />
       <StatsSection />
       <Project />
+      <Testimonial />
       <Blog />
       <FAQSection />
       <Contact />
       <Call />
+      <Marquee />
       <Footer />
     </div>
   );
