@@ -54,11 +54,11 @@ const Home = () => {
           <a href="#" className="text-[#222] border-b-2 border-[#222] pb-1">
             HOME
           </a>
-          <a href="#">ABOUT</a>
-          <a href="#">SERVICES</a>
-          <a href="#">WORK</a>
-          <a href="#">BLOG</a>
-          <a href="#">CONTACT</a>
+          <a href="/about">ABOUT</a>
+          <a href="/services">SERVICES</a>
+          <a href="/work">WORK</a>
+          <a href="/blog">BLOG</a>
+          <a href="/contact">CONTACT</a>
         </nav>
 
         {/* Desktop Social Icons */}
