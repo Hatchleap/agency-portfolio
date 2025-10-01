@@ -76,18 +76,21 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
         className="pointer-events-none fixed top-5 right-5 z-40 w-[1px] h-[1px] md:hidden"
       >
         <div
-          className={`absolute rounded-full bg-[#FDECE2] w-[284vmax] h-[284vmax] -top-[142vmax] -left-[142vmax] transform transition-transform duration-500 ${
-            menuOpen ? "scale-100" : "scale-0"
-          }`}
+          className={`absolute rounded-full bg-[#FDECE2] w-[284vmax] h-[284vmax] -top-[142vmax] -left-[142vmax] 
+            transition-transform duration-[500ms] ease-[cubic-bezier(0.755,0.050,0.855,0.060)] will-change-transform
+            ${menuOpen ? "scale-100" : "scale-0"}
+          `}
         />
       </div>
 
       {/* Mobile Menu Overlay */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-400 md:hidden ${
-          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden
+          transition-opacity duration-500 ease-[cubic-bezier(0.755,0.050,0.855,0.060)]
+          ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+        `}
+        style={{ willChange: 'opacity' }}
       >
         {/* Close Button */}
         <button

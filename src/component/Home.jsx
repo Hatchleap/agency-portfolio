@@ -92,18 +92,21 @@ const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
         className="pointer-events-none fixed top-5 right-5 z-40 w-[1px] h-[1px] md:hidden"
       >
         <div
-          className={`absolute rounded-full bg-[#FDECE2] w-[284vmax] h-[284vmax] -top-[142vmax] -left-[142vmax] transform transition-transform duration-500 ${
-            menuOpen ? "scale-100" : "scale-0"
-          }`}
+          className={`absolute rounded-full bg-[#FDECE2] w-[284vmax] h-[284vmax] -top-[142vmax] -left-[142vmax] 
+            transition-transform duration-[500ms] ease-[cubic-bezier(0.755,0.050,0.855,0.060)] will-change-transform
+            ${menuOpen ? "scale-100" : "scale-0"}
+          `}
         />
       </div>
 
       {/* Mobile Menu Overlay */}
       <div
         id="mobile-menu"
-        className={`fixed inset-0 z-40 flex flex-col items-center justify-center transition-opacity duration-400 md:hidden ${
-          menuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-        }`}
+        className={`fixed inset-0 z-40 flex flex-col items-center justify-center md:hidden
+          transition-opacity duration-500 ease-[cubic-bezier(0.755,0.050,0.855,0.060)]
+          ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}
+        `}
+        style={{ willChange: 'opacity' }}
       >
         {/* Close Button */}
         <button
@@ -206,7 +209,7 @@ const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
 
 
       {/* HERO CONTENT - Vertically Centered */}
-      <div className="flex flex-col flex-grow justify-center md:justify-center z-10 relative min-h-[80vh] md:min-h-[60vh] lg:min-h-[60vh] xl:min-h-[60vh]">
+      <div className="flex flex-col flex-grow justify-center md:justify-center z-10 relative min-h-[75vh] md:min-h-[60vh] lg:min-h-[60vh] xl:min-h-[60vh]">
         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 mt-10 md:mt-16 lg:mt-24">
           {/* Left Side - Heading */}
           <div className="md:w-1/2">
@@ -240,7 +243,7 @@ const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
 
 
       {/* REDOX Text - Background */}
-      <div className="absolute bottom-2 md:bottom-16 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none">
+      <div className="absolute bottom-5 md:bottom-16 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none">
         <h1
           className="text-[80px] sm:text-[100px] md:text-[140px] lg:text-[180px] font-extrabold text-[#FF5722] leading-none"
           style={{ transform: "scaleY(2)" }}
