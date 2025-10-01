@@ -61,10 +61,10 @@ export default function Contactus() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-gray-100 to-white flex items-center justify-center py-10 px-2 md:px-0">
-      <div className="w-full max-w-6xl bg-white/70 rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden">
+    <div className="w-full min-h-screen bg-gradient-to-br from-gray-100 to-white flex items-center justify-center py-10 px-2 md:px-0 2xl:px-20">
+      <div className="w-full max-w-6xl 2xl:max-w-7xl bg-white/70 rounded-2xl shadow-xl flex flex-col md:flex-row overflow-hidden">
         {/* Left Side */}
-        <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-between">
+  <div className="md:w-1/2 p-8 md:p-10 2xl:p-16 flex flex-col justify-between">
           <div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-8 tracking-tight">GET IN TOUCH</h2>
             <div className="space-y-6 mb-8">
@@ -105,7 +105,7 @@ export default function Contactus() {
           </div>
         </div>
         {/* Right Side (Form) */}
-        <div className="md:w-1/2 bg-white/60 p-8 md:p-10 flex flex-col justify-center">
+  <div className="md:w-1/2 bg-white/60 p-8 md:p-10 2xl:p-16 flex flex-col justify-center">
           <form className="space-y-6" onSubmit={handleSubmit}>
             <input
               type="text"

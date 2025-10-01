@@ -17,13 +17,14 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <section
-      className="relative min-h-[55vh] w-full bg-cover bg-center text-black"
+      className="relative min-h-[40vh] w-full bg-cover bg-center text-black"
       style={{ backgroundImage: 'url(/image/pagebg.jpg)' }}
     >
       {/* NAVBAR */}
   <header className="absolute top-0 left-0 w-full z-30 flex items-center justify-center px-4 md:px-16 py-8">
         {/* Logo */}
         <div className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2">
+        <a href="/">
           <Image
             src="/image/lo.png"
             alt="Logo"
@@ -33,6 +34,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
             style={{ filter: 'brightness(0) invert(1) contrast(1.2)' }}
             priority
           />
+          </a>
         </div>
 
         {/* Desktop Nav */}
@@ -192,7 +194,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
       </div>
 
       {/* Hero Content */}
-  <div className="flex flex-col items-start justify-center h-[55vh] md:h-[60vh] pl-4 md:pl-16 pt-32 md:pt-40">
+  <div className="flex flex-col items-start justify-center h-[5vh] md:h-[60vh] pl-4 md:pl-16 pt-44 md:pt-40">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">WORK</h1>
         <div className="flex items-center space-x-3 text-lg md:text-xl font-semibold">
           <a href="/" className="flex items-center text-orange-400 hover:text-orange-500 transition-colors">
