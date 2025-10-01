@@ -137,10 +137,10 @@ const Project = () => {
       if (ref) {
         const rect = ref.getBoundingClientRect();
         const windowHeight = window.innerHeight;
-        const targetOffset = ((rect.top - windowHeight / 2) / windowHeight) * 20; // smaller movement
+        const targetOffset = ((rect.top - windowHeight / 2) / windowHeight) * 30; // smaller movement
         // Smoothly interpolate the offset
         offsetRefs.current[index] = offsetRefs.current[index] || 0;
-        offsetRefs.current[index] += (targetOffset - offsetRefs.current[index]) * 0.1; // easing factor
+        offsetRefs.current[index] += (targetOffset - offsetRefs.current[index]) * 0.30; // easing factor
         ref.querySelector(".parallax-image").style.transform = `translateY(${offsetRefs.current[index]}px) scale(1.2)`;
       }
     });

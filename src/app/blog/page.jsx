@@ -1,5 +1,4 @@
 import BlogHero from "./BlogHero";
-import BlogTeam from "./BlogTeam";
 import BlogMission from "./BlogMission";
 import FAQSection from '../../component/FAQSection';
 import Contact from '../../component/Contact';
@@ -11,7 +10,6 @@ export default function About() {
   return (
     <main>
       <BlogHero />
-      <BlogTeam />
       <BlogMission />
       <FAQSection />
       <Contact />

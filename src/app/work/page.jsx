@@ -1,7 +1,5 @@
-
 import WorkHero from "./WorkHero";
-import WorkTeam from "./WorkTeam";
-import WorkMission from "./WorkMission";
+import Project from "@/component/Project";
 import Blog from '../../component/Blog';
 import FAQSection from '../../component/FAQSection';
 import Contact from '../../component/Contact';
@@ -13,8 +11,7 @@ export default function About() {
   return (
     <main>
       <WorkHero />
-      <WorkMission />
-      <WorkTeam />
+      <Project />
       <Blog />
       <FAQSection />
       <Contact />
