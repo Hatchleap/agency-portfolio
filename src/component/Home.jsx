@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
 
-const Home = () => {
+const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuItems = ["Home", "About", "Services", "Work", "Blog", "Contact"];
 
@@ -34,7 +34,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#FDECE2] text-black px-6 md:px-16 pt-5 pb-28 md:pb-40 relative overflow-hidden">
+  <section className="w-full bg-[#FDECE2] text-black px-6 md:px-16 pt-5 pb-28 md:pb-40 relative overflow-hidden min-h-screen md:min-h-[80vh] lg:min-h-[90vh] xl:min-h-[100vh]">
       {/* NAVBAR */}
       <header className="absolute top-0 left-0 w-full z-30 bg-[#FDECE2]/90 backdrop-blur-md flex items-center justify-center px-4 md:px-16 py-8">
         {/* Logo */}
@@ -42,8 +42,8 @@ const Home = () => {
           <Image
             src="/image/lo.png"
             alt="Logo"
-            width={120}
-            height={50}
+            width={logoWidth}
+            height={logoHeight}
             className="object-contain"
             priority
           />
@@ -115,21 +115,79 @@ const Home = () => {
         </button>
 
         <nav className="flex flex-col items-center text-xl uppercase tracking-widest text-black">
-          {menuItems.map((label, i) => (
-            <a
-              key={label}
-              href="#"
-              onClick={() => setMenuOpen(false)}
-              className={`py-3 px-6 block transform transition-all duration-500 ${
-                menuOpen
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 -translate-y-6 pointer-events-none"
-              }`}
-              style={{ transitionDelay: `${menuOpen ? i * 80 + 150 : 0}ms` }}
-            >
-              {label}
-            </a>
-          ))}
+          {/* Use correct hrefs for mobile nav */}
+          <a
+            href="/"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 0 * 80 + 150 : 0}ms` }}
+          >
+            HOME
+          </a>
+          <a
+            href="/about"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 1 * 80 + 150 : 0}ms` }}
+          >
+            ABOUT
+          </a>
+          <a
+            href="/services"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 2 * 80 + 150 : 0}ms` }}
+          >
+            SERVICES
+          </a>
+          <a
+            href="/work"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 3 * 80 + 150 : 0}ms` }}
+          >
+            WORK
+          </a>
+          <a
+            href="/blog"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 4 * 80 + 150 : 0}ms` }}
+          >
+            BLOG
+          </a>
+          <a
+            href="/contact"
+            onClick={() => setMenuOpen(false)}
+            className={`py-3 px-6 block transform transition-all duration-500 ${
+              menuOpen
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 -translate-y-6 pointer-events-none"
+            }`}
+            style={{ transitionDelay: `${menuOpen ? 5 * 80 + 150 : 0}ms` }}
+          >
+            CONTACT
+          </a>
         </nav>
 
         <div
@@ -146,49 +204,46 @@ const Home = () => {
         </div>
       </div>
 
-      {/* HERO CONTENT */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 relative z-10 mt-20">
-        {/* Left Side - Heading */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-6xl font-bold leading-snug">
-            Let’s sharpen your brand with <br className="hidden md:block" />
-            quality work
-          </h2>
-        </div>
 
-        {/* Right Side - Stats + Paragraph */}
-        <div className="flex flex-col space-y-6 md:w-1/2">
-          <div>
-            <p className="text-3xl md:text-4xl font-bold">98%</p>
+      {/* HERO CONTENT - Vertically Centered */}
+      <div className="flex flex-col flex-grow justify-center md:justify-center z-10 relative min-h-[80vh] md:min-h-[60vh] lg:min-h-[60vh] xl:min-h-[60vh]">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-12 mt-10 md:mt-16 lg:mt-24">
+          {/* Left Side - Heading */}
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-6xl font-bold leading-snug">
+              Let’s sharpen your brand with <br className="hidden md:block" />
+              quality work
+            </h2>
+          </div>
+
+          {/* Right Side - Stats + Paragraph */}
+          <div className="flex flex-col space-y-6 md:w-1/2">
+            <div>
+              <p className="text-3xl md:text-4xl font-bold">98%</p>
+              <p className="text-gray-700">
+                Average clients satisfied and repeating
+              </p>
+            </div>
+            <div>
+              <p className="text-3xl md:text-4xl font-bold">120+</p>
+              <p className="text-gray-700">
+                Successfully projects done in 24 countries
+              </p>
+            </div>
             <p className="text-gray-700">
-              Average clients satisfied and repeating
+              We’re a digital products design & development agency that works
+              passionately with the digital experiences.
             </p>
           </div>
-          <div>
-            <p className="text-3xl md:text-4xl font-bold">120+</p>
-            <p className="text-gray-700">
-              Successfully projects done in 24 countries
-            </p>
-          </div>
-          <p className="text-gray-700">
-            We’re a digital products design & development agency that works
-            passionately with the digital experiences.
-          </p>
         </div>
       </div>
 
-      {/* Circle Logo Bottom */}
-      <div className="flex justify-start mt-8 relative z-10">
-        <div className="w-20 h-20 border border-black rounded-full flex items-center justify-center text-lg font-bold">
-          W.
-        </div>
-      </div>
 
       {/* REDOX Text - Background */}
-      <div className="absolute bottom-2 md:bottom-12 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none">
+      <div className="absolute bottom-2 md:bottom-16 left-1/2 -translate-x-1/2 w-full flex justify-center pointer-events-none">
         <h1
           className="text-[80px] sm:text-[100px] md:text-[140px] lg:text-[180px] font-extrabold text-[#FF5722] leading-none"
-          style={{ transform: "scaleY(1.4)" }}
+          style={{ transform: "scaleY(2)" }}
         >
           REDOX
         </h1>
