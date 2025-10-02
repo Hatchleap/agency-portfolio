@@ -7,6 +7,12 @@ import Contact from '../../component/Contact';
 import Call from '../../component/call';
 import Marquee from '../../component/Marquee';
 import Footer from '../../component/Footer';
+import ServiceCollection from "../services/ServiceCollection";
+import ServiceMission from "../services/ServiceMission";
+import ServiceMarquee from "../services/ServiceMarquee";
+import Testimonial from "../../component/Testimonial";
+import AboutEmp from "./AboutEmp";
+// import AboutUs from "./AboutUs";
 
 export default function About() {
   return (
@@ -14,6 +20,11 @@ export default function About() {
       <AboutHero />
       <AboutMission />
       <AboutTeam />
+      <ServiceCollection />
+      <ServiceMission />
+      <ServiceMarquee />
+      <Testimonial />
+      <AboutEmp />
       <Blog />
       <FAQSection />
       <Contact />

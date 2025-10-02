@@ -195,7 +195,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
 
       {/* Hero Content */}
   <div className="flex flex-col items-start justify-center h-[5vh] md:h-[60vh] pl-4 md:pl-16 pt-44 md:pt-40">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">BLOG</h1>
+        <h1 className="text-5xl md:text-7xl 2xl:text-8xl font-extrabold text-white mb-6">BLOG</h1>
         <div className="flex items-center space-x-3 text-lg md:text-xl font-semibold">
           <a href="/" className="flex items-center text-orange-400 hover:text-orange-500 transition-colors">
             <FaHome className="w-6 h-6 mr-1 text-orange-400" />

@@ -50,7 +50,7 @@ const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-[#444]">
+        <nav className="hidden md:flex items-center gap-8 text-xs md:text-sm 2xl:text-base font-semibold tracking-widest text-[#444]">
           <a href="#" className="text-[#222] border-b-2 border-[#222] pb-1">
             HOME
           </a>
@@ -62,7 +62,7 @@ const Home = ({ logoWidth = 180, logoHeight = 80 }) => {
         </nav>
 
         {/* Desktop Social Icons */}
-        <div className="hidden md:flex items-center gap-5 text-[#222] text-base absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex items-center gap-5 text-[#222] text-base 2xl:text-lg absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
           <FaTwitter />
           <FaFacebookF />
           <FaDribbble />

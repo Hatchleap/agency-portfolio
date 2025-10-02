@@ -38,7 +38,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-white">
+        <nav className="hidden md:flex items-center gap-8 text-xs md:text-sm 2xl:text-base font-semibold tracking-widest text-white">
           <a href="/" className="text-white">HOME</a>
           <a href="/about" className="text-white">ABOUT</a>
           <a href="/services" className="text-white border-b-2 border-white pb-1">SERVICES</a>
@@ -48,7 +48,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
         </nav>
 
         {/* Desktop Social Icons */}
-        <div className="hidden md:flex items-center gap-5 text-white text-base absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex items-center gap-5 text-white text-base 2xl:text-lg absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
           <FaTwitter />
           <FaFacebookF />
           <FaDribbble />
@@ -195,7 +195,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
 
       {/* Hero Content */}
   <div className="flex flex-col items-start justify-center h-[5vh] md:h-[60vh] pl-4 md:pl-16 pt-44 md:pt-40">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6">SERVICES</h1>
+        <h1 className="text-5xl md:text-7xl 2xl:text-8xl font-extrabold text-white mb-6">SERVICES</h1>
         <div className="flex items-center space-x-3 text-lg md:text-xl font-semibold">
           <a href="/" className="flex items-center text-orange-400 hover:text-orange-500 transition-colors">
             <FaHome className="w-6 h-6 mr-1 text-orange-400" />
