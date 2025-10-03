@@ -8,14 +8,16 @@ import Marquee from '../../component/Marquee';
 import Footer from '../../component/Footer';
 import ServiceCollection from "./ServiceCollection";
 import ServiceMarquee from "./ServiceMarquee";
+import ServiceUs from "./ServiceUs";
 
 export default function About() {
   return (
     <main>
       <ServiceHero />
-      <ServiceMission />
-      <ServiceMarquee />
+      <ServiceUs />
       <ServiceCollection />
+      <ServiceMarquee />
+      <ServiceMission />
       <Blog />
       <FAQSection />
       <Contact />

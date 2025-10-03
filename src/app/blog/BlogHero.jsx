@@ -38,7 +38,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest text-white">
+        <nav className="hidden md:flex items-center gap-8 text-xs md:text-sm 2xl:text-base font-semibold tracking-widest text-white">
           <a href="/" className="text-white">HOME</a>
           <a href="/about" className="text-white">ABOUT</a>
           <a href="/services" className="text-white">SERVICES</a>

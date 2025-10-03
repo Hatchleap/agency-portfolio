@@ -17,7 +17,7 @@ import Marquee from "@/component/Marquee";
 export default function Page() {
   return (
     <div>
-      <Home />
+      <Hero />
       <About />
       <WhereCreateSection />
       <ProcessSection />
