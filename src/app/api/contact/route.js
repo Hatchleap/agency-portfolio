@@ -1,7 +1,10 @@
-import nodemailer from "nodemailer";
+export const runtime = "nodejs"; // ✅ ensures Node.js runtime instead of Edge
 
 export async function POST(req) {
   try {
+    // ✅ dynamically import nodemailer so it only loads at runtime
+    const nodemailer = await import("nodemailer");
+
     const body = await req.json();
     const { name, email, contact, service, message } = body;
 
@@ -11,6 +14,7 @@ export async function POST(req) {
       });
     }
 
+    // ✅ setup transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -24,7 +28,13 @@ export async function POST(req) {
       to: process.env.GMAIL_USER,
       subject: `New Contact Form Submission: ${service || "No Service"}`,
       text: `Name: ${name}\nEmail: ${email}\nContact: ${contact || "-"}\nService: ${service || "-"}\nMessage: ${message}`,
-      html: `<p><b>Name:</b> ${name}</p><p><b>Email:</b> ${email}</p><p><b>Contact:</b> ${contact || "-"}</p><p><b>Service:</b> ${service || "-"}</p><p><b>Message:</b><br/>${message}</p>`
+      html: `
+        <p><b>Name:</b> ${name}</p>
+        <p><b>Email:</b> ${email}</p>
+        <p><b>Contact:</b> ${contact || "-"}</p>
+        <p><b>Service:</b> ${service || "-"}</p>
+        <p><b>Message:</b><br/>${message}</p>
+      `,
     };
 
     await transporter.sendMail(mailOptions);
