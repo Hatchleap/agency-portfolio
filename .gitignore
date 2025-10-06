@@ -1,2 +1,17 @@
 node_modules/
 .next/
+dist/
+build/
+npm-debug.log*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+/.pnp
+.pnp.js
+coverage/
+/.cache/
+# OS files
+Thumbs.db
+.DS_Store

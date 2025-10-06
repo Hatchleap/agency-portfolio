@@ -1,5 +1,5 @@
 import WorkHero from "./WorkHero";
-import Project from "@/component/Project";
+import Project from '../../component/Project';
 import Blog from '../../component/Blog';
 import FAQSection from '../../component/FAQSection';
 import Contact from '../../component/Contact';

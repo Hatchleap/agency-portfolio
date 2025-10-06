@@ -43,13 +43,13 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
             alt="Logo"
             width={logoWidth}
             height={logoHeight}
-            className="object-contain 4xl:w-[280px] 4xl:h-[130px]" // bigger logo on 4xl
+            className="object-contain 4xl:w-[280px] 4xl:h-[130px]"
             priority
           />
         </div>
 
         {/* Desktop Nav */}
-  <nav className="hidden md:flex items-center gap-8 text-xs md:text-sm 2xl:text-base 4xl:text-2xl font-semibold tracking-widest text-[#444]">
+        <nav className="hidden md:flex items-center gap-8 text-xs md:text-sm 2xl:text-base 4xl:text-2xl font-semibold tracking-widest text-[#444]">
           <a href="#" className="text-[#222] border-b-2 border-[#222] pb-1">
             HOME
           </a>
@@ -61,7 +61,7 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
         </nav>
 
         {/* Desktop Social Icons */}
-  <div className="hidden md:flex items-center gap-5 text-[#222] text-base 2xl:text-lg 4xl:text-2xl absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex items-center gap-5 text-[#222] text-base 2xl:text-lg 4xl:text-2xl absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
           <FaTwitter />
           <FaFacebookF />
           <FaDribbble />
@@ -107,7 +107,6 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
         `}
         style={{ willChange: "opacity" }}
       >
-        {/* Close Button */}
         <button
           onClick={() => setMenuOpen(false)}
           aria-label="Close Menu"
@@ -150,7 +149,7 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
 
       {/* MAIN HERO CONTENT */}
       <div className="pt-20 md:pt-20 flex items-center min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 w-full">
+        <div className="max-w-7xl 4xl:max-w-[90%] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20 w-full">
           {/* Headings Section */}
           <div className="mb-8">
             {/* Mobile Headings */}
@@ -182,7 +181,7 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
 
             {/* Desktop Headings */}
             <div className="hidden sm:block">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 4xl:max-w-[2000px] mx-auto">
                 <div className="flex items-center flex-wrap">
                   <h1 className="font-extrabold text-black text-[clamp(2rem,6vw,4.5rem)] 4xl:text-[8rem] leading-tight mr-2">
                     IGNITING CREATIVITY
@@ -218,9 +217,9 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
           </div>
 
           {/* Main Content */}
-          <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch gap-15">
+          <div className="flex flex-col-reverse lg:flex-row items-center lg:items-stretch gap-16 md:gap-16">
             {/* Left: Text */}
-            <div className="flex-1 flex flex-col justify-center items-start gap-6 w-full max-w-xl">
+            <div className="flex-1 flex flex-col justify-center items-start gap-6 w-full max-w-xl 4xl:max-w-[700px]">
               {/* Play Button + Description */}
               <div className="flex items-start gap-3 w-full">
                 <span className="flex items-center justify-center w-12 h-7 sm:w-12 sm:h-12 4xl:w-20 4xl:h-20 rounded-full border-2 border-orange-500">
@@ -242,7 +241,7 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
                     <polygon points="10,8 16,12 10,16" fill="#FFA500" />
                   </svg>
                 </span>
-                <p className="text-gray-700 text-base sm:text-lg md:text-xl 4xl:text-3xl max-w-sm">
+                <p className="text-gray-700 text-base sm:text-lg md:text-xl 4xl:text-3xl max-w-sm 4xl:max-w-[600px]">
                   At our agency, we ignite the spark of creativity to transform
                   brands into unforgettable experiences. We help businesses stand
                   out.
@@ -267,7 +266,7 @@ export default function Hero({ logoWidth = 180, logoHeight = 80 }) {
             </div>
 
             {/* Right: Image */}
-            <div className="flex-1 flex flex-col items-center justify-center relative w-full max-w-xl">
+            <div className="flex-1 flex flex-col items-center justify-center relative w-full max-w-xl 4xl:max-w-[1400px]">
               <div className="w-full rounded-2xl overflow-hidden shadow-lg">
                 <Image
                   src="/image/b.jpeg"
