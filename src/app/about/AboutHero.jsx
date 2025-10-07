@@ -37,7 +37,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
               alt="Logo"
               width={logoWidth}
               height={logoHeight}
-              className="object-contain 3xl:w-[200px] 3xl:h-[190px] 5xl:w-[250px] 5xl:h-[210px]"
+              className="object-contain 3xl:w-[200px] 3xl:h-[190px] 5xl:w-[400px] 5xl:h-[400px]"
               style={{ filter: 'brightness(0) invert(1) contrast(1.2)' }}
               priority
             />
@@ -55,7 +55,7 @@ export default function ServiceHero({ logoWidth = 180, logoHeight = 80 }) {
         </nav>
 
         {/* Desktop Social Icons */}
-        <div className="hidden md:flex items-center gap-5 text-white text-sm 2xl:text-sm 3xl:text-xl 5xl:text-3xl absolute right-4 md:right-8 top-1/2 -translate-y-1/2">
+        <div className="hidden md:flex items-center gap-5 5xl:gap-10 text-white text-sm 2xl:text-sm 3xl:text-xl 5xl:text-4xl absolute right-4 md:right-8 5xl:right-16 top-1/2 -translate-y-1/2">
           <FaTwitter />
           <FaFacebookF />
           <FaDribbble />
