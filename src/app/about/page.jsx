@@ -12,13 +12,14 @@ import ServiceMission from "../services/ServiceMission";
 import ServiceMarquee from "../services/ServiceMarquee";
 import Testimonial from "../../component/Testimonial";
 import AboutEmp from "./AboutEmp";
-// import AboutUs from "./AboutUs";
+import AboutUs from "./AboutUs";
 
 export default function About() {
   return (
     <main>
       <AboutHero />
       <AboutMission />
+      <AboutUs />
       <AboutTeam />
       <ServiceCollection />
       <ServiceMission />

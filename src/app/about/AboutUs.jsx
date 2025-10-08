@@ -1,78 +1,118 @@
-// "use client";
-// import React from "react";
-// import Image from "next/image";
+"use client";
+import React from "react";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa";
 
-// export default function AboutUs() {
-//   return (
-//     <section className="relative w-full bg-lime-400 py-12 sm:py-16 lg:py-24">
-//       <div className="max-w-7xl 2xl:max-w-screen-2xl 4xl:max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-12 4xl:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
-        
-//         {/* Left Content */}
-//         <div className="text-black flex flex-col justify-center">
-//           <h1
-//             className="font-extrabold leading-tight mb-6"
-//             style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
-//           >
-//             WELCOME TO <br /> BLUNOR INC.
-//           </h1>
+const AboutUs = () => {
+  return (
+    <section
+      className="w-full py-16 px-4 sm:px-8 md:px-10 lg:px-20 xl:px-32 2xl:px-48 3xl:px-56 5xl:px-72
+      max-w-[2000px] 2xl:max-w-[2000px] 3xl:max-w-[2200px] 5xl:max-w-[3500px] mx-auto"
+    >
+      <div
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start 
+        3xl:gap-20 5xl:gap-28"
+      >
+        {/* LEFT SECTION */}
+        <div className="flex flex-col justify-center space-y-10 3xl:space-y-14 5xl:space-y-16">
+          {/* Label */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-medium tracking-wider text-orange-500 3xl:text-2xl 5xl:text-3xl">
+              — WHO WE ARE
+            </span>
+          </div>
 
-//           {/* Experience Row */}
-//           <div className="flex items-center mb-6 space-x-4">
-//             <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white text-lg font-bold">
-//               🌿
-//             </div>
-//             <div>
-//               <p className="font-bold text-lg sm:text-xl md:text-2xl">
-//                 30+ <span className="font-medium">Years Experience</span>
-//               </p>
-//             </div>
-//           </div>
+          {/* Arrow Above Stats */}
+          <div className="flex justify-start">
+            <FaArrowRight
+              className="text-5xl md:text-8xl text-gray-700 rotate-[135deg] 
+              3xl:text-[9rem] 5xl:text-[15rem]"
+              style={{
+                fill: "none",
+                stroke: "currentColor",
+                strokeWidth: 2,
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+              }}
+            />
+          </div>
 
-//           {/* Description */}
-//           <p
-//             className="text-base sm:text-lg text-black/80 mb-8 max-w-lg"
-//             style={{ fontSize: "clamp(0.9rem, 1.2vw, 1.1rem)" }}
-//           >
-//             We’re brand builders, storytellers, and digital architects crafting
-//             experiences that connect, convert, and cut through the noise. From
-//             strategy to execution, we blend creativity with precision to help
-//             ambitious brands move differently and grow boldly.
-//           </p>
+          {/* Stats Section */}
+          <div className="flex flex-col gap-8 3xl:gap-10 5xl:gap-12">
+            {[
+              {
+                value: "100%",
+                label: "Service satisfaction guarantee",
+              },
+              {
+                value: "25K",
+                label: "Successfully finished project",
+              },
+              {
+                value: "18+",
+                label: "Experience engineering members",
+              },
+            ].map((item, index) => (
+              <div key={index}>
+                <h2
+                  className="font-extrabold text-black text-[clamp(2.5rem, 5vw, 2.5rem)]
+                  2xl:text-[2rem] 3xl:text-[3.5rem] 5xl:text-[4.5rem]"
+                //   style={{
+                //     fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
+                //   }}
+                >
+                  {item.value}
+                </h2>
+                <p className="text-gray-500 text-sm md:text-base 2xl:text-[1rem] 3xl:text-3xl 5xl:text-5xl">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
 
-//           {/* CTA Button */}
-//           <button className="bg-black text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full text-sm sm:text-base transition hover:bg-gray-800">
-//             START A PROJECT
-//           </button>
-//         </div>
+        {/* RIGHT SECTION */}
+        <div className="flex flex-col gap-8 3xl:gap-12 5xl:gap-14">
+          {/* Paragraph and Small Arrow */}
+          <div className="flex items-start gap-4 3xl:gap-6">
+            <div className="mt-2 flex-shrink-0 text-gray-700">
+              <FaArrowRight className="text-3xl md:text-4xl rotate-[-45deg] 3xl:text-5xl 5xl:text-7xl" />
+            </div>
 
-//         {/* Right Side - Masked Number with Image */}
-//         <div className="relative flex items-center justify-center h-full">
-//           <div className="relative w-full h-full flex items-center justify-center">
-//             <div
-//               className="w-full h-full flex items-center justify-center"
-//               style={{
-//                 WebkitMaskImage:
-//                   "url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 500 300%22><text x=%2250%22 y=%22220%22 font-size=%22200%22 font-weight=%22700%22>10</text></svg>')",
-//                 WebkitMaskRepeat: "no-repeat",
-//                 WebkitMaskPosition: "center",
-//                 WebkitMaskSize: "contain",
-//                 maskImage:
-//                   "url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 500 300%22><text x=%2250%22 y=%22220%22 font-size=%22200%22 font-weight=%22700%22>10</text></svg>')",
-//                 maskRepeat: "no-repeat",
-//                 maskPosition: "center",
-//                 maskSize: "contain",
-//               }}
-//             >
-//               <Image
-//                 src="/image/b.jpeg"
-//                 alt="About Us"
-//                 fill
-//                 className="object-cover"
-//               />
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+            <p className="
+  text-gray-800 font-medium leading-relaxed
+  text-[clamp(1rem,1.5vw,1.3rem)]
+  3xl:text-[2rem] 5xl:text-[3.5rem] 5xl:leading-[1.4]
+  max-w-[36rem] 3xl:max-w-[100%] 5xl:max-w-[100%]
+">
+  Orvio believe in the power of creativity to ignite growth. We aim
+  to empower businesses to unlock full potential by delivering
+  cutting–edge marketing solutions that drive results.
+</p>
+
+          </div>
+
+          {/* About Button */}
+          <button className="flex items-center gap-2 3xl:gap-5 5xl:gap-12 border border-gray-400 px-5 py-2 5xl:px-10 5xl:py-4 rounded-full text-sm md:text-base 3xl:text-2xl 5xl:text-3xl hover:bg-black hover:text-white transition-all w-fit">
+            About Us
+            <FaArrowRight className="text-xs md:text-sm 3xl:text-base" />
+          </button>
+
+          {/* Image */}
+          <div className="w-full max-w-[500px] 2xl:max-w-[100%] 3xl:max-w-[100%] 5xl:max-w-[100%] rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/image/b.jpeg"
+              alt="Team Meeting"
+              width={900}
+              height={700}
+              className="w-full h-auto object-cover rounded-2xl 2xl:h-[300px] 3xl:h-[500px] 5xl:h-[600px]"
+              priority
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutUs;
