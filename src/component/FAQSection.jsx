@@ -130,7 +130,7 @@ const FAQSection = () => {
       <div className="max-w-4xl mx-auto text-center">
         {/* Heading */}
         <p className="text-sm uppercase tracking-widest text-orange-500 font-semibold">
-          📌 Frequently Asked Questions
+           Frequently Asked Questions
         </p>
         <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">
           YOU ASKED, WE ANSWERED

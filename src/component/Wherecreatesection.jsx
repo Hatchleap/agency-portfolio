@@ -224,8 +224,7 @@ const Wherecreatesection = () => {
           </p>
 
           <div className="flex justify-center md:justify-start items-center gap-4 w-full">
-            <button className="flex items-center gap-2 sm:gap-3 bg-lime-400 hover:bg-lime-500 text-black font-bold text-sm sm:text-lg 2xl:text-lg 3xl:text-2xl 5xl:text-3xl px-4 sm:px-4 2xl:px-6 3xl:px-12 5xl:px-16 py-3 sm:py-4 2xl:py-4 3xl:py-6 rounded-full shadow transition">
-              <span className="text-xl sm:text-2xl 2xl:text-xl 3xl:text-4xl">↗</span>
+            <button className="flex items-center gap-2 sm:gap-3 bg-orange-400 hover:bg-orange-500 text-black font-bold text-sm sm:text-lg 2xl:text-lg 3xl:text-2xl 5xl:text-3xl px-4 sm:px-4 2xl:px-6 3xl:px-12 5xl:px-16 py-3 sm:py-4 2xl:py-4 3xl:py-6 rounded-full shadow transition">
               VIEW ALL SERVICES
             </button>
           </div>
@@ -269,7 +268,7 @@ const Wherecreatesection = () => {
               <div className="relative w-[300px] h-[300px] sm:w-[500px] sm:h-[600px] md:w-[800px] md:h-[600px] 2xl:w-[1000px] 2xl:h-[700px] 3xl:w-[1200px] 3xl:h-[800px] 5xl:w-[1600px] 5xl:h-[1000px] rounded-2xl border-[6px] sm:border-[8px] md:border-[20px] 2xl:border-[24px] 3xl:border-[28px] 5xl:border-[36px] border-[#333333] shadow-xl overflow-hidden bg-white ml-4">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
                 <div className="absolute left-4 bottom-4 2xl:left-8 3xl:left-12 5xl:left-16">
-                  <button className="bg-lime-400 text-black px-3 sm:px-4 2xl:px-6 3xl:px-8 py-2 2xl:py-3 rounded font-bold shadow hover:bg-lime-500 transition text-xs sm:text-sm 2xl:text-base 3xl:text-lg 5xl:text-xl">
+                  <button className="bg-orange-400 text-black px-3 sm:px-4 2xl:px-6 3xl:px-8 py-2 2xl:py-3 rounded font-bold shadow hover:bg-orange-500 transition text-xs sm:text-sm 2xl:text-base 3xl:text-lg 5xl:text-xl">
                     WEBSITE DEVELOPMENT
                   </button>
                 </div>

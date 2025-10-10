@@ -41,7 +41,7 @@ const Blog = () => {
         <h2 className="text-3xl font-bold mb-8">Our latest insights</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {blogPosts.map((post, index) => (
-            <div key={post.id} className="rounded-lg overflow-hidden group cursor-pointer">
+            <div key={post.id} className="rounded-xl overflow-hidden group cursor-pointer">
               {/* Image Section */}
               <div className={index === 0 ? "relative h-[200px] md:h-[400px]" :
                                index === 1 ? "relative h-[200px] md:h-[450px]" :

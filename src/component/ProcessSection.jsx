@@ -295,7 +295,7 @@ const ProcessSection = () => {
     >
       {/* Heading */}
       <div className="max-w-6xl mx-auto w-full flex flex-col items-center text-center mb-16 sm:mb-20 md:mb-24 2xl:mb-28 3xl:mb-32 5xl:mb-40">
-        <h2 className="text-[clamp(1.875rem,5vw,2.5rem)] md:text-[clamp(2rem,4vw,3rem)] font-bold text-green-500 mb-4">
+        <h2 className="text-[clamp(1.875rem,5vw,2.5rem)] md:text-[clamp(2rem,4vw,3rem)] font-bold text-orange-500 mb-4">
           OUR PROCESS
         </h2>
         <p className="text-gray-600 max-w-2xl text-[clamp(0.875rem,2.5vw,1.125rem)] md:text-lg 5xl:text-xl">
@@ -326,7 +326,7 @@ const ProcessSection = () => {
           >
             <div
               ref={greenRef}
-              className="absolute top-0 left-0 w-full bg-green-500 h-0 transition-all duration-300 ease-linear"
+              className="absolute top-0 left-0 w-full bg-orange-500 h-0 transition-all duration-300 ease-linear"
             />
           </div>
 
@@ -340,7 +340,7 @@ const ProcessSection = () => {
               >
                 {/* Star */}
                 <div
-                  className="relative w-12 flex flex-col items-center mr-2 5xl:mr-8 left-[13px] min-w-[3rem]"
+                  className="relative w-12 flex flex-col items-center mr-4 5xl:mr-8 left-[18px] min-w-[3rem]"
                 >
                   {idx < steps.length - 1 && (
                     <div className="absolute top-8 5xl:top-16 left-1/2 transform -translate-x-1/2 w-[0.25rem] bg-gray-700 h-full 5xl:h-[100%]" />
@@ -358,7 +358,7 @@ const ProcessSection = () => {
                       : "opacity-0 translate-y-10"
                   } 5xl:translate-y-0`}
                 >
-                  <h3 className="text-green-500 font-bold mb-4 5xl:mb-14 text-[clamp(0.875rem,2.5vw,1rem)] md:text-[clamp(1rem,2.5vw,1.125rem)] 5xl:text-2xl">{`STEP 0${idx + 1}`}</h3>
+                  <h3 className="text-orange-400 font-bold mb-4 5xl:mb-14 text-[clamp(0.875rem,2.5vw,1rem)] md:text-[clamp(1rem,2.5vw,1.125rem)] 5xl:text-2xl">{`STEP 0${idx + 1}`}</h3>
                   <h2 className="text-black text-[clamp(1.25rem,3vw,1.75rem)] md:text-[clamp(1.5rem,3vw,2rem)] 3xl:text-2xl 5xl:text-3xl font-bold mb-2">{step.title}</h2>
                   <p className="text-gray-700 max-w-xl text-[clamp(0.875rem,2.5vw,1rem)] md:text-[clamp(1rem,2.5vw,1.125rem)] 5xl:text-xl">{step.desc}</p>
                 </div>
